@@ -28,6 +28,9 @@ const theme = createMuiTheme({
   typography: {
     useNextVariants: true,
   },
+  appBar: {
+    height: 64,
+  },
 });
 
 const styles = {
@@ -94,14 +97,21 @@ const styles = {
   faSortDown: {
     marginTop: '-5px',
   },
+  toolbar: {
+    display: 'flex',
+    justifyContent: 'space-around',
+  },
+  mainDiv: {
+    display: 'flex',
+  },
 };
 
 const Header = () => (
   <MuiThemeProvider theme={theme}>
     <div style={styles.root}>
-      <AppBar>
-        <Toolbar style={{ display: 'flex', justifyContent: 'space-around' }}>
-          <div style={{ display: 'flex' }}>
+      <AppBar position="static">
+        <Toolbar style={styles.toolbar}>
+          <div style={styles.mainDiv}>
             <div style={styles.leftMenu}>
               <img src={logo} alt="Logo" style={styles.logo} />
             </div>
