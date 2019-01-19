@@ -1,5 +1,6 @@
 import React from 'react';
 import LeftCard from '../presentations/LeftCard';
+import PostProject from '../presentations/PostProject';
 
 const styles = {
   container: {
@@ -8,6 +9,7 @@ const styles = {
     paddingTop: 20,
   },
   content: {
+    display: 'flex',
     width: '80%',
   },
 };
@@ -16,6 +18,7 @@ const HomePage = () => (
   <div style={styles.container}>
     <div style={styles.content}>
       <LeftCard />
+      <PostProject />
     </div>
   </div>
 );
