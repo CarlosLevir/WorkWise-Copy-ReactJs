@@ -2,6 +2,8 @@
 
 A simple copy implementation of WorkWise Template.
 
+### [DEMO](http://work-wise.esy.es)
+
 ## Usage
 
 Just enjoy the visual template, always in development.
