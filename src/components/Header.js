@@ -28,9 +28,6 @@ const theme = createMuiTheme({
   typography: {
     useNextVariants: true,
   },
-  appBar: {
-    height: 64,
-  },
 });
 
 const styles = {
@@ -70,6 +67,8 @@ const styles = {
   },
   rightMenu: {
     display: 'flex',
+    alignItems: 'center',
+    height: 56,
   },
   rightMenuUL: {
     display: 'flex',
@@ -87,7 +86,8 @@ const styles = {
   userAccount: {
     display: 'flex',
     alignItems: 'center',
-    padding: '10px',
+    paddingLeft: '10px',
+    paddingRight: '10px',
     borderLeft: '1px solid #dd3e2b',
     borderRight: '1px solid #dd3e2b',
   },
@@ -106,12 +106,16 @@ const styles = {
   mainDiv: {
     display: 'flex',
   },
+  appBar: {
+    height: 56,
+    justifyContent: 'center',
+  },
 };
 
 const Header = () => (
   <MuiThemeProvider theme={theme}>
     <div style={styles.root}>
-      <AppBar position="static">
+      <AppBar position="static" style={styles.appBar}>
         <Toolbar style={styles.toolbar}>
           <div style={styles.mainDiv}>
             <div style={styles.leftMenu}>

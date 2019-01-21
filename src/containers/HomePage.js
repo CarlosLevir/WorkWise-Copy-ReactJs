@@ -1,6 +1,7 @@
 import React from 'react';
 import LeftCard from '../presentations/LeftCard';
 import PostProject from '../presentations/PostProject';
+import FeedCard from '../presentations/FeedCard';
 
 const styles = {
   container: {
@@ -11,6 +12,10 @@ const styles = {
   content: {
     display: 'flex',
     width: '80%',
+    flexWrap: 'wrap',
+  },
+  midDiv: {
+    marginLeft: '3%',
   },
 };
 
@@ -18,7 +23,10 @@ const HomePage = () => (
   <div style={styles.container}>
     <div style={styles.content}>
       <LeftCard />
-      <PostProject />
+      <div style={styles.midDiv}>
+        <PostProject />
+        <FeedCard />
+      </div>
     </div>
   </div>
 );
