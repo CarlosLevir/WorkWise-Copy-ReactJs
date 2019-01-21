@@ -6,6 +6,7 @@ import userPic from '../assets/images/user-pic.png';
 const styles = {
   LeftCard: {
     width: 270,
+    marginBottom: 20,
   },
   userProfileOrange: {
     display: 'flex',

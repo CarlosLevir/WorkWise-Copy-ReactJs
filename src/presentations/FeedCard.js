@@ -24,6 +24,7 @@ const styles = {
     backgroundColor: 'white',
     marginTop: '3%',
     width: 500,
+    maxWidth: '90%',
     padding: 15,
     borderBottom: '1px solid #e5e5e5',
   },
@@ -102,6 +103,7 @@ const styles = {
   },
   badgesGrey: {
     display: 'flex',
+    flexWrap: 'wrap',
     marginBottom: 20,
   },
   feedbackDiv: {
@@ -110,6 +112,7 @@ const styles = {
     justifyContent: 'space-between',
     backgroundColor: 'white',
     width: 500,
+    maxWidth: '90%',
     padding: 15,
     borderBottom: '1px solid #e5e5e5',
   },

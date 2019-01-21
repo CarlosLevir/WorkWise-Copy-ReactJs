@@ -15,9 +15,12 @@ import {
   faBolt,
   faSortDown,
 } from '@fortawesome/free-solid-svg-icons';
+import IconButton from '@material-ui/core/IconButton';
+import MenuIcon from '@material-ui/icons/Menu';
 import logo from '../assets/images/logo.png';
 import userPic from '../assets/images/user-pic.png';
 import { commonStyles } from '../utils/styles';
+import { RightMenu, MenuMobile, Searcher } from './styles/StyleHeader';
 
 const theme = createMuiTheme({
   palette: {
@@ -34,12 +37,6 @@ const styles = {
   logo: {
     width: 32,
     height: 32,
-  },
-  searcher: {
-    width: 280,
-    height: 38,
-    display: 'flex',
-    marginLeft: 10,
   },
   searchInput: {
     width: '90%',
@@ -64,11 +61,6 @@ const styles = {
   },
   searchIcon: {
     color: commonStyles.orange,
-  },
-  rightMenu: {
-    display: 'flex',
-    alignItems: 'center',
-    height: 56,
   },
   rightMenuUL: {
     display: 'flex',
@@ -114,22 +106,26 @@ const styles = {
 
 const Header = () => (
   <MuiThemeProvider theme={theme}>
-    <div style={styles.root}>
+    <div>
       <AppBar position="static" style={styles.appBar}>
         <Toolbar style={styles.toolbar}>
           <div style={styles.mainDiv}>
             <div style={styles.leftMenu}>
               <img src={logo} alt="Logo" style={styles.logo} />
             </div>
-            <div style={styles.searcher}>
+            <Searcher>
               <input placeholder="Search..." style={styles.searchInput} />
               <button type="button" variant="contained" style={styles.searchButton}>
                 <FontAwesomeIcon icon={faSearch} style={styles.searchIcon} />
               </button>
-            </div>
+            </Searcher>
           </div>
-
-          <div style={styles.rightMenu}>
+          <MenuMobile>
+            <IconButton aria-label="Menu">
+              <MenuIcon />
+            </IconButton>
+          </MenuMobile>
+          <RightMenu>
             <ul style={styles.rightMenuUL}>
               <li style={styles.rightMenuLI}>
                 <FontAwesomeIcon icon={faHome} />
@@ -165,7 +161,7 @@ const Header = () => (
               <Typography style={styles.typographyIcons}>John</Typography>
               <FontAwesomeIcon icon={faSortDown} style={styles.faSortDown} />
             </div>
-          </div>
+          </RightMenu>
         </Toolbar>
       </AppBar>
     </div>

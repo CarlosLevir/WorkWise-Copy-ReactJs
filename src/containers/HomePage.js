@@ -11,11 +11,13 @@ const styles = {
   },
   content: {
     display: 'flex',
+    justifyContent: 'center',
     width: '80%',
     flexWrap: 'wrap',
   },
   midDiv: {
     marginLeft: '3%',
+    maxWidth: '110%',
   },
 };
 

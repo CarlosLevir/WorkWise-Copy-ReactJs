@@ -9,6 +9,7 @@ const styles = {
     backgroundColor: 'white',
     borderTop: '4px solid #e44d3a',
     width: 500,
+    maxWidth: '90%',
     height: 50,
     padding: 15,
     boxShadow: 5,
